@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 03, 2019 at 10:07 AM
+-- Generation Time: Dec 03, 2019 at 11:48 AM
 -- Server version: 10.1.36-MariaDB
 -- PHP Version: 5.6.38
 
@@ -44,6 +44,25 @@ CREATE TABLE `admin` (
 INSERT INTO `admin` (`idadmin`, `useradmin`, `passadmin`, `namaadmin`, `emailadmin`, `asaladmin`) VALUES
 (2323, 'angga', 'angga', 'angga', 'angga', 'angga');
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `kategori`
+--
+
+CREATE TABLE `kategori` (
+  `idkategori` int(20) NOT NULL,
+  `namakategori` varchar(200) NOT NULL,
+  `keterangan` varchar(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `kategori`
+--
+
+INSERT INTO `kategori` (`idkategori`, `namakategori`, `keterangan`) VALUES
+(1, 'Teknologi', 'Seputar Teknologi');
+
 --
 -- Indexes for dumped tables
 --
@@ -53,6 +72,12 @@ INSERT INTO `admin` (`idadmin`, `useradmin`, `passadmin`, `namaadmin`, `emailadm
 --
 ALTER TABLE `admin`
   ADD PRIMARY KEY (`idadmin`);
+
+--
+-- Indexes for table `kategori`
+--
+ALTER TABLE `kategori`
+  ADD PRIMARY KEY (`idkategori`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
